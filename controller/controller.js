@@ -9,21 +9,6 @@ const createTables = async (req, res) => {
     product_name: "sample product",
   });
 
-  await variantTable.create({
-    variant_name: "sample variant",
-    productId: "1",
-  });
-
-  await optionTable.create({
-    option_name: "sample option",
-    variantId: "1",
-  });
-
-  await valueTable.create({
-    value_name: "sample value",
-    optionId: "1",
-  });
-
   res.send({
     success: "Data is inserted in database.",
   });
